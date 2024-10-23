@@ -1,0 +1,153 @@
+/* General Styling */
+.container-fluid {
+  padding: 0 15px;
+}
+
+.feature-heading {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feature-separator {
+  border: 1px solid #000;
+}
+
+/* Carousel Styling */
+.carousel-wrapper {
+  background-color: transparent;
+}
+
+.slider {
+  margin: 0 10px;
+  overflow: hidden;
+}
+.flip-card {
+  background-color: transparent;
+  /* width: 300px;
+  height: 200px; */
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(150, 161, 161);
+  border-radius: 10px;
+  padding: 30px;
+  padding-bottom: 85px;
+
+  /* position: relative; */
+  /* width: 100%;
+  height: 100%; */
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .image-container {
+  transform: rotateY(180deg);
+}
+
+
+.image-wrapper {
+  position: absolute;
+  /* width: 200px;   */
+  /* height: 200px; Fixed height */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-wrapper, .flip-card-back {
+  
+  width: 90%;
+  height: 90%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.image-wrapper {
+  /* background-color: #bbb; */
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  /* background-color: dodgerblue; */
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.backbutton{
+  border: solid 3px black;
+    border-radius: 10px;
+    width: 65%;
+    /* margin-bottom: 10px;margin-top: 10px; */
+}
+
+.backbutton:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+  background-color: green;
+  
+}
+
+.image {
+  width: 95%;
+  height: 100%;
+  object-fit: contain; /* Ensures the image covers the entire container without distortion */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  margin-top: 10px;
+}
+
+.image:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+
+}
+
+.image-label {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 5px 0;
+  font-weight: bold;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.react-multi-carousel-list {
+  padding: 0rem 0 2rem 0;
+}
+/* Dot styling */
+.custom-dot-list-style button {
+  padding-top: 20px;
+  border: none;
+ 
+
+  height: 10px;
+  width: 10px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  display: inline-block;
+  
+  cursor: pointer;
+}
+
+.react-multi-carousel-dot--active button {
+  background-color: steelblue !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .image-wrapper {
+    width: 150px;  /* Reduced size for mobile */
+    height: 150px; /* Reduced size for mobile */
+  }
+}
+

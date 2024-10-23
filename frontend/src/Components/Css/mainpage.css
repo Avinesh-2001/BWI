@@ -1,0 +1,24 @@
+
+.smallabout {
+    margin: 8% 6% 6% 6%;
+    text-align: center;
+    
+}
+
+.h1 {
+    font-weight: bold;
+    font-family: 'math'; /* Assuming 'math' is a specific font */
+    font-size: 2rem; /* Adjusted font size for better readability */
+}
+
+.h5 {
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif; /* Using a common sans-serif font */
+    font-size: 1rem;
+}
+
+.h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: normal; /* Ensuring normal weight for consistency */
+}

@@ -1,0 +1,477 @@
+.icubed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.icubed-title {
+    font-weight: bolder;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.icubed-instruct {
+    font-weight: normal;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 1200px;
+}
+
+.icubed-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+.type1 {
+    background-color: rgb(50, 191, 114);
+    text-align: center;
+    padding: 10px 30px;
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    margin-top: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.type1:hover {
+    color: white;
+}
+
+.title1 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.electric {
+    border-bottom: 10px solid #D7D7D7;
+}
+
+.specification-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0 30px;
+}
+
+.specification {
+    font-family: 'Poppins', sans-serif;
+    padding-left: 30px;
+    border: 2px #D8D8D8;
+}
+
+.icubed-spec {
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #2A774B;
+    padding: 15px 20px 10px 10px;
+}
+
+.icubed-points {
+    text-align: left;
+    border-left: 5px solid #2A7750;
+    list-style-type: none;
+    padding: 1px 0px;
+    width: auto;
+}
+
+.points {
+    padding: 10px 40px;
+    border-bottom: 1px dotted #D8D8D8;
+    line-height: 15px;
+    list-style-type: none;
+    position: relative;
+    font-size: 0.8rem;
+}
+
+.points::before {
+    content: ">>";
+    position: absolute;
+    padding-left: 10px;
+    left: 0;
+    font-weight: 450;
+}
+
+.points:hover,
+.points:active {
+    color: #2a7750;
+    font-size: 110%;
+    font-weight: 500;
+}
+
+.btn.btn-success {
+    margin: 20px 0 0 0;
+    align-items: center;
+
+}
+
+.image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container for the image zoom effect */
+.image1 {
+    border: solid #d7d7d7 1px;
+    height: 450px;
+    width: 450px;
+    margin-left: 20px;
+    background-color: white;
+    position: relative;
+    cursor: zoom-in;
+    overflow: hidden;
+}
+
+.image1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Modal container */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: -10;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(15, 14, 14, 0.959);
+}
+
+
+
+
+/* Modal content (the image itself) */
+.modalcontent {
+    margin: 70px auto;
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    border-radius: none;
+    background-color: white;
+}
+
+/* Close button */
+.modal-close {
+    position: absolute;
+    top: 25px;
+    right: 31%;
+    color: rgb(107, 104, 104);
+    font-size: 35px;
+    font-weight: 450;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #07713e;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.image-demo-container {
+    display: flex;
+    width: 450px;
+    margin-left: 20px;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.image-demo {
+    border: solid #D7D7D7 1px;
+    height: 80px;
+    width: 90px;
+    padding: 5px;
+    background-color: white;
+}
+
+.image-demo:hover,
+.image-demo:active {
+    transform: scale(1.5);
+}
+
+/* .custom {
+    margin: 30px -130px 30px 130px  !important;
+} */
+
+.icubed-1,
+.icubed-2,
+.icubed-3,
+.icubed-4 {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    padding: 20px;
+    background: #fff;
+}
+
+/* Modal specific CSS */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 7px;
+    width: 700px;
+    height: 550px;
+    max-width: 550px !important;
+    position: relative;
+    padding: 30px;
+    margin: 5px;
+}
+
+.form {
+    padding: 5px 20px;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 3rem;
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    color: #a68c56;
+    stroke-width: 0;
+}
+
+/* Form specific CSS */
+.form-title {
+    margin-bottom: 3rem;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-title .h2 {
+    font-family: 'gilroyextrabold';
+    line-height: 30px;
+    margin-top: 0;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+
+}
+
+.form-title .subtitle {
+    font-size: 0.8rem;
+    margin-top: 20px;
+    line-height: 19.12px;
+    text-align: center;
+}
+
+.input-container {
+
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.input {
+    border-radius: 7px;
+    border: 1px solid #a68c56;
+    box-sizing: border-box;
+    color: black;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 0.5rem 1rem;
+    width: 100%;
+
+}
+
+.input:focus {
+    background-color: #f8f9fa;
+    outline: none;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 40px #fafafa inset !important;
+}
+
+
+.cut-short {
+    width: 50px;
+
+}
+
+.input:focus~.cut,
+.input:not(:placeholder-shown)~.cut {
+    transform: translateY(8px);
+}
+
+.placeholder {
+    color: black;
+    font-family: sans-serif;
+    left: 12px;
+    text-align: center;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 15px;
+    display: flex;
+    min-height: 0;
+    vertical-align: middle;
+    cursor: none;
+    background-color: white;
+
+}
+
+
+.input:focus~.placeholder,
+.input:not(:placeholder-shown)~.placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+    background-color: transparent;
+    border: 0;
+    padding: 3px 5px 2px 5px;
+    color: #a68c56;
+    font-weight: bold;
+
+}
+
+.input:focus~.placeholder {
+    background-color: white;
+
+
+}
+
+.submit {
+    background-color: #a68c56;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.submit:active {
+    background-color: #8f7848;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .specification-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .specification {
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .image-demo-container {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .icubed-title {
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+
+    .icubed-instruct {
+        font-size: 1.2rem;
+    }
+
+    .type1 {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+    }
+
+    .icubed-spec {
+        font-size: 1.5rem;
+    }
+
+    .modal-close {
+        font-size: 25px;
+        top: 10px;
+        right: 10%;
+    }
+
+    .image1 {
+        height: 300px;
+        width: 300px;
+    }
+
+    .image-demo {
+        height: 60px;
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn.btn-success {
+        margin: 50px 10px;
+    }
+
+    .icubed-title {
+        font-size: 1.5rem;
+    }
+
+    .icubed-instruct {
+        font-size: 1rem;
+    }
+
+    .type1 {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+
+    .specification {
+        padding: 10px;
+    }
+
+    .image1 {
+        height: 200px;
+        width: 200px;
+    }
+
+    .image-demo {
+        height: 50px;
+        width: 70px;
+    }
+}

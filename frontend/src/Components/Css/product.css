@@ -1,0 +1,43 @@
+.product {
+    margin: 3% 8% 3% 8%;
+    text-align: center;
+}
+
+.product-head{
+    font-weight: bolder;
+    margin-top: 70px;
+    /* margin-bottom: 20px; */
+    text-align: center;
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 1024px) {
+    .product {
+        margin: 1% 6% 1% 6%; /* Reduced margins for medium screens */
+    }
+    
+    .product-head {
+        font-size: 2.5em; /* Adjust font size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        margin: 1% 2% 1% 2%; /* Further reduced margins for small screens */
+    }
+
+    .product-head {
+        font-size: 2em; /* Smaller font size for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        margin: 1% 1% 1% 1%; /* Smallest margins for extra-small screens */
+    }
+
+    .product-head {
+        font-size: 1.5em; /* Reduced font size for extra-small screens */
+    }
+}

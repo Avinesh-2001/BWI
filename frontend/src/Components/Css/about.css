@@ -1,0 +1,106 @@
+.about-us {
+    margin: 0 auto;
+    width: 100%;
+    /* max-width: 1200px; */
+  }
+  
+  .about-head {
+    font-weight: bolder;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    /* gap: 9 */
+    margin-bottom: 40px;
+  }
+  
+  .content {
+    flex: 0 0 69%;
+    text-align: justify;
+  }
+  
+  .about-img-container {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Existing styles for vision-mission-container, vision, and mission remain unchanged */
+.vision-mission-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.vision,
+.mission {
+    flex: 1 1 48%; /* Use flex-grow, flex-shrink, and flex-basis */
+    text-align: center;
+    font-size: 10px;
+    height: auto;
+    border: solid 2px rgb(50, 49, 49);
+    border-radius: 5px;
+    background-color: azure;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .vision,
+    .mission {
+        flex: 1 1 100%; /* Full width on smaller screens */
+    }
+
+    .about2 {
+        flex: 1 1 100%; /* Full width for image on smaller screens */
+        margin-right: 0;
+    }
+
+    .content {
+        margin-left: 0; /* Remove the negative margin for smaller screens */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+
+    .vision,
+    .mission {
+        font-size: 12px; /* Slightly increase font size for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Further adjust heading size for very small screens */
+    }
+
+    .vision,
+    .mission {
+        font-size: 10px; /* Adjust font size for very small screens */
+    }
+}
